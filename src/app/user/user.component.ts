@@ -1,5 +1,5 @@
 import { Component, OnInit, transition } from '@angular/core';
-import { setInterval } from 'timers';
+
 
 @Component({
   selector: 'app-user',
@@ -15,6 +15,8 @@ export class UserComponent implements OnInit {
     setInterval(() => {
         if (this.userName.length > 0) {
           this.isUserNameValid = true;
+        }else {
+          this.isUserNameValid = false;
         }
     }, 500);
   }
