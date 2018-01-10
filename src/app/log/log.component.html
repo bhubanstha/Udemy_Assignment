@@ -1,0 +1,10 @@
+<div class="container">
+<input type="button" class="btn btn-primary" value="{{ButtonText}}" (click)="onSecretClick()">
+<p *ngIf="isSecretVisible">Secret Content</p>
+
+<p *ngFor="let clickTimeStamp of clickTimeStamps" 
+[ngStyle]="{'background-color': getBackgroundColor()}"
+[ngClass]="{CountReach: clickCount>=5}">
+  {{clickTimeStamp}}
+</p>
+</div>
