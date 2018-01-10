@@ -23,6 +23,6 @@ export class LogComponent implements OnInit {
   }
 
   getBackgroundColor() {
-    return this.clickCount >= 5 ? 'blue' : '';
+    return this.clickCount >= 5 ? 'blue' : 'transparent';
   }
 }
