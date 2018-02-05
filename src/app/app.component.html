@@ -1,5 +1,18 @@
 <div class="container">
-    <div class="col-lg-6">
-
+    <div class="row">
+            <div class="col-lg-6">
+                    <app-game-control 
+                    (gameStart)="onGameStarted($event)"
+                    (gameStopped)="onGameStopped($event)"
+                    ></app-game-control>
+                </div>
     </div>
+    <div class="row">
+    <div class="col-lg-6">
+        <div *ngFor="let count of counter">
+            <app-even [countDownNumber]="count" *ngIf="count%2 == 0"></app-even>
+            <app-odd [countDownNumber]="count" *ngIf="count%2 == 1"></app-odd>
+        </div>
+    </div>
+</div>
 </div>
