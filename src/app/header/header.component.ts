@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , EventEmitter, Output} from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 
 export class HeaderComponent {
  title= ' ';
+ @Output() menuClicked = new EventEmitter<String>();
+ onFeatureSelection(feature: string) {
+    this.menuClicked.emit(feature);
+ }
 }

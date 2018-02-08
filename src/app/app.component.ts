@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  selectedFeature: string = 'recipe';
+  OnMenuClick(feature: string) {
+    this.selectedFeature = feature;
+  }
 }
