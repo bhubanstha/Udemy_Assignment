@@ -1,4 +1,10 @@
-<ul class="list-group">
-    <li class="list-group-item"
-    *ngFor="let u of users">{{u.Name}}</li>
+<div>
+  <h2 class="panel-heading">Inactive Users</h2>
+  <hr>
+  <ul class="list-group">
+      <li class="list-group-item"
+      *ngFor="let u of users">{{u.Name}} ({{u.ClickCount}})  
+        <a href="#" (click)="onInactive(u.Id)" class="pull-right">Set To Active</a>
+      </li>
   </ul>
+</div>

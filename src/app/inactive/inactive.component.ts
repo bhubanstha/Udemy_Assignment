@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { User } from '../Model/user';
+import { UserService } from '../Services/User.service';
 
 @Component({
   selector: 'app-inactive',
@@ -7,10 +9,21 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class InactiveComponent implements OnInit {
 
-  constructor() { }
+  @Input() users: User[];
+
+  constructor(private userService: UserService) {
+    this.userService.onUserStatusChanged.subscribe((status: string) => this.users = this.userService.Users.filter(function(el) {
+      return el.Status === false;
+    }));
+  }
 
   ngOnInit() {
   }
-  @Input() users:  [{Id: Number, Name: string, ClickCount: number, Status: boolean}];
+
+  onInactive(id: number) {
+    this.userService.onUserUpdate(id, true);
+    this.userService.onUserStatusChanged.emit(true);
+  }
+
 
 }
