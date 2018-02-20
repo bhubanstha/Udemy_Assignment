@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+.footer {
+    background-color: #222222;
+    bottom: 0%;
+    color: whitesmoke;
+    margin: 0;
+    margin-left: -25px;
+    padding: 0px;
+    padding-left: 100px;
+    position: fixed;
+    width: 100%;
+}
+
+.footer p {
+    margin-top: 8px;
+}
+.page-header {
+    margin: 4px 0 20px;
+}
+
+.profilepic{
+    margin: auto;
+    max-height: 200px;
+}
+
+.holder {
+    min-height: 200px;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+}
+
+.bottom:parent {
+    position: relative;
+}

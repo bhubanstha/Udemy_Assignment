@@ -1,0 +1,37 @@
+<div id="page-wrapper" [ngStyle]="{'min-height.px' : windowHeight}">
+  <div class="container-fluid">
+      <!-- Page Heading -->
+      
+      <div class="row">
+          <div class="col-lg-12">
+              <h1 class="page-header">
+                  Details <small>Statistics Overview</small>
+                  <a class="btn btn-success pull-right">New Contact</a>
+              </h1>
+          </div>
+      </div>
+      <div class="row">
+        <fieldset>
+            <legend>{{person.Title}}. {{person.Name}}</legend>
+            <div class="col-lg-12">            
+            <div class="row col-sm-4 col-md-4 col-lg-4 holder">
+                <img src="{{person.Image}}" class="img-responsive img-rounded profilepic">
+                <div class="info">
+                    <p>Loreium Ipsum Loreium Ipsum Loreium Ipsum Loreium Ipsum Loreium Ipsum Loreium Ipsum Loreium Ipsum Loreium Ipsum </p>
+                </div>
+            </div>
+            <div class="row col-sm-8 col-md-8 col-lg-8 holder">
+                <div class="bottom">
+                        <button class="btn btn-success">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-primary">Add To Emergency List</button>
+                </div>               
+            </div>
+        </div>
+           </fieldset>
+      </div>
+
+      <app-footer></app-footer>
+  </div>
+  <!-- /.container-fluid -->
+</div>
